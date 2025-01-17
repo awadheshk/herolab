@@ -1,5 +1,11 @@
-export USERNAME_2=student-00-13720b8d699f@qwiklabs.net
+######
+curl -LO https://raw.githubusercontent.com/awadheshk/herolab/refs/heads/main/064.sh
 
+sudo chmod +x 064.sh
+
+./064.sh
+===============
+export USERNAME_2=
 gsutil mb -l us -b on gs://$DEVSHELL_PROJECT_ID
 echo "subscribe to quicklab " > sample.txt
 gsutil cp sample.txt gs://$DEVSHELL_PROJECT_ID
