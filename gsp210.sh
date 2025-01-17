@@ -28,9 +28,6 @@ echo "${BG_MAGENTA}${BOLD}Starting Execution${RESET}"
 export ZONE_1=$(gcloud compute project-info describe \
 --format="value(commonInstanceMetadata.items[google-compute-default-zone])")
 
-export ZONE_2=$(gcloud compute project-info describe \
---format="value(commonInstanceMetadata.items[google-compute-default-zone])")
-
 gcloud compute networks create mynetwork \
   --project=$DEVSHELL_PROJECT_ID \
   --subnet-mode=auto \
@@ -67,4 +64,4 @@ gcloud compute instances create mynet-second-vm \
   --labels=goog-ec-src=vm_add-gcloud \
   --reservation-affinity=any
 
-echo "${BG_RED}${BOLD}Congratulations For Completing The Lab !!!${RESET}"
+echo "${BG_RED}${BOLD}Completing The Lab !!!${RESET}"
