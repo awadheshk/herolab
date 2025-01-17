@@ -1,4 +1,4 @@
-export USERNAME_2=
+export USERNAME_2=student-00-13720b8d699f@qwiklabs.net
 
 gsutil mb -l us -b on gs://$DEVSHELL_PROJECT_ID
 echo "subscribe to quicklab " > sample.txt
