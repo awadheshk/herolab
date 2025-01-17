@@ -1,3 +1,12 @@
+
+export ZONE_2=
+curl -LO raw.githubusercontent.com/awadheshk/herolab/refs/heads/main/gsp210.sh
+sudo chmod +x gsp210.sh
+./gsp210.sh
+
+
+
+
 #!/bin/bash
 # Define color variables
 
@@ -25,8 +34,11 @@ RESET=`tput sgr0`
 
 echo "${BG_MAGENTA}${BOLD}Starting Execution${RESET}"
 
+
 export ZONE_1=$(gcloud compute project-info describe \
 --format="value(commonInstanceMetadata.items[google-compute-default-zone])")
+
+export ZONE_2=
 
 gcloud compute networks create mynetwork \
   --project=$DEVSHELL_PROJECT_ID \
