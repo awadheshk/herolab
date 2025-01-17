@@ -1,4 +1,3 @@
-
 export ZONE_1=europe-west1-c
 export ZONE_2=us-central1-c
 
