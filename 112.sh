@@ -1,5 +1,5 @@
 
-curl -LO raw.githubusercontent.com/quiccklabs/Labs_solutions/master/Web%20Security%20Scanner%20Qwik%20Start/quicklabgsp112.sh
+curl -LO https://raw.githubusercontent.com/awadheshk/herolab/refs/heads/main/112.sh
 
 sudo chmod +x 112.sh
 
