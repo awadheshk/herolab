@@ -1,7 +1,11 @@
+curl -LO https://raw.githubusercontent.com/awadheshk/herolab/refs/heads/main/064.sh
 
+sudo chmod +x gsp210.sh
 
-export ZONE_1=us-east4-a
-export ZONE_2=us-east1-c
+./gsp210.sh
+
+export ZONE_1=
+export ZONE_2=
 
 gcloud compute networks create mynetwork \
   --project=$DEVSHELL_PROJECT_ID \
