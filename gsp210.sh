@@ -1,4 +1,4 @@
-curl -LO https://raw.githubusercontent.com/awadheshk/herolab/refs/heads/main/064.sh
+curl -LO https://raw.githubusercontent.com/awadheshk/herolab/refs/heads/main/gsp210.sh
 
 sudo chmod +x gsp210.sh
 
