@@ -1,5 +1,5 @@
-export ZONE_1=europe-west1-c
-export ZONE_2=us-central1-c
+export ZONE_1=us-central1-c
+export ZONE_2=us-west1-b
 
 gcloud compute networks create mynetwork \
   --project=$DEVSHELL_PROJECT_ID \
