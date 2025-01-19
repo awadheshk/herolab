@@ -1,3 +1,8 @@
+curl -LO https://raw.githubusercontent.com/awadheshk/herolab/refs/heads/main/gsp210.sh
+
+sudo chmod +x gsp210.sh
+
+./gsp210.sh
 export ZONE_1=us-central1-c
 export ZONE_2=us-west1-b
 
