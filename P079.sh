@@ -1,13 +1,11 @@
-export KEYRING_NAME=test
-export CRYPTOKEY_NAME=qwiklab
 curl -LO https://raw.githubusercontent.com/awadheshk/herolab/refs/heads/main/P079.sh
 sudo chmod +x P079.sh
 ./P079.sh
 
-=====================
-
 gcloud services enable cloudkms.googleapis.com
 
+export KEYRING_NAME=test
+export CRYPTOKEY_NAME=qwiklab
 export BUCKET_NAME="$DEVSHELL_PROJECT_ID-enron_corpus"
 
 gsutil mb gs://${BUCKET_NAME}
@@ -16,14 +14,12 @@ gsutil cp gs://enron_emails/allen-p/inbox/1. .
 
 tail 1.
 
-
 gcloud kms keyrings create $KEYRING_NAME --location global
 
 gcloud kms keys create $CRYPTOKEY_NAME --location global \
       --keyring $KEYRING_NAME \
       --purpose encryption
      
-
 PLAINTEXT=$(cat 1. | base64 -w0)
 
 curl -v "https://cloudkms.googleapis.com/v1/projects/$DEVSHELL_PROJECT_ID/locations/global/keyRings/$KEYRING_NAME/cryptoKeys/$CRYPTOKEY_NAME:encrypt" \
@@ -43,9 +39,7 @@ curl -v "https://cloudkms.googleapis.com/v1/projects/$DEVSHELL_PROJECT_ID/locati
   -H "Content-Type:application/json" \
 | jq .plaintext -r | base64 -d
 
-
 gsutil cp 1.encrypted gs://${BUCKET_NAME}
-
 
 gsutil -m cp -r gs://enron_emails/allen-p .
 
