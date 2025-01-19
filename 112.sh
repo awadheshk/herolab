@@ -1,8 +1,6 @@
-curl -LO https://raw.githubusercontent.com/awadheshk/herolab/refs/heads/main/P079.sh
-sudo chmod +x P079.sh
-./P079.sh
 
-export REGION=us-central1
+
+export REGION=us-east4
 
 gsutil -m cp -r gs://spls/gsp067/python-docs-samples .
 cd python-docs-samples/appengine/standard_python3/hello_world
