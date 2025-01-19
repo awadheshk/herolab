@@ -1,6 +1,6 @@
 
 
-export REGION=us-east4
+export REGION=us-west1
 
 gsutil -m cp -r gs://spls/gsp067/python-docs-samples .
 cd python-docs-samples/appengine/standard_python3/hello_world
