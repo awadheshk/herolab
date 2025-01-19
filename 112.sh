@@ -1,4 +1,6 @@
-
+curl -LO https://raw.githubusercontent.com/awadheshk/herolab/refs/heads/main/112.sh
+sudo chmod +x 112.sh
+./112.sh
 
 export REGION=us-west1
 
