@@ -1,3 +1,6 @@
+curl -LO https://raw.githubusercontent.com/awadheshk/herolab/refs/heads/main/P079.sh
+sudo chmod +x P079.sh
+./P079.sh
 
 export REGION=us-central1
 
